@@ -4,7 +4,7 @@ async function login() {
     const password = document.getElementById('loginPassword').value;
   
     try {
-      const response = await fetch('http://localhost:3000/login', {
+      const response = await fetch('http://localhost:3000/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ async function login() {
   
       if (response.ok) {
         alert('User logged in successfully!');
-        // Add logic to handle successful login, e.g., redirect to dashboard
+        window.location.href = 'http://localhost:3000/expense/addexpense';
       } else {
         alert(`Error: ${data.message}`);
       }

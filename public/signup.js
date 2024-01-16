@@ -4,7 +4,7 @@ async function signup() {
   const password = document.getElementById('password').value;
 
   try {
-    const response = await fetch('http://localhost:3000/signup', {
+    const response = await fetch('http://localhost:3000/user/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
