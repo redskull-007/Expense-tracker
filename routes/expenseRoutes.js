@@ -16,4 +16,6 @@ router.get('/addExpense', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'views', 'expense.html'));
 });
 
+router.delete('/deleteexpense/:id', ExpenseController.deleteExpense);
+
 module.exports = router;
